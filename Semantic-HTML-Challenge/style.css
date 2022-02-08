@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --border: #800080;
+  --bg-odd: #ff33cc;
+  --bg-even: #e495e4;
+}
+
+table {
+  background-image: url("https://cdn.glitch.me/8b1beacc-937c-4072-93d6-4ae825ab1a7a%2Fleopardskin.jpg");
+  margin: 0 auto;
+}
+tbody {
+  background-image: url("https://cdn.glitch.me/8b1beacc-937c-4072-93d6-4ae825ab1a7a%2Fnoise.png");
+
+  font-family: Helvetica;
+}
+td {
+  padding: 5px 10px;
+}
+th,
+tfoot tr {
+  padding: 8px 10px;
+}
+tbody tr td {
+  border: none;
+}
+tr {
+  text-align: center;
+}
+
+thead,
+tfoot {
+  color: #fff;
+  font-family: "Rock Salt", cursive;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--bg-even);
+  color: #000;
+}
+tbody tr:nth-child(odd) {
+  background-color: var(--bg-odd);
+  color: #000;
+}
+table,
+thead tr th {
+  border: 2px solid var(--border);
+  border-collapse: collapse;
+}
+.right {
+  border-right: 2px solid var(--border);
+}
+tfoot td {
+  border-top: 2px solid var(--border);
+}
