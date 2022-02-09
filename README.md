@@ -1,4 +1,4 @@
-<h2>I am currently enrolled on a Level 4 - Software Developer Apprenticeship with The Coders Guild and working as a senior assistant software developer for Dedalus.</h2>
+<h2>I am currently enrolled on a Level 4 - Software Developer Apprenticeship with The Coders Guild.</h2>
 
 <h3>Modules include:</h3>
 <ul>
