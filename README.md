@@ -1,4 +1,5 @@
 <h2>I am currently enrolled on a Level 4 - Software Developer Apprenticeship with The Coders Guild.</h2>
+<p>This repository is dedicated to my apprenticeship homework/assignments </p>
 
 <h3>Modules include:</h3>
 <ul>
