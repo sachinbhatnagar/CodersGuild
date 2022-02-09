@@ -5,13 +5,13 @@
   <li>Coding Fundamentals</li>
   <li>Introduction to Object Oriented Programming</li>
   <li>Introduction to Test Driven Development</li>
-  <li>Introduction to Data Analysis</li>
   <li>HTML and CSS Fundamentals</li>
   <li>Introduction to JavaScript</li>
   <li>Interactive and Responsive Web Design</li>
+  <li>The Mern Stack</i>
   <li>Introduction to Full-Stack Applications</li>
   <li>Security Fundamentals</li>
-  <li>Agile Foundation (BCS)</li>
+  <li>Rest API</li>
 </ul>
 
 <h3 align="left">Connect with me:</h3>
