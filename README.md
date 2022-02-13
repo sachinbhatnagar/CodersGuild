@@ -11,9 +11,9 @@
   <li>Introduction to JavaScript</li>
   <li>Interactive and Responsive Web Design</li>
   <li>The Mern Stack</i>
-  <li>Introduction to Full-Stack Applications</li>
-  <li>Security Fundamentals</li>
-  <li>Rest API</li>
+  <li>Introduction to Full-Stack Applications.</li>
+  <li>Security Fundamentals.</li>
+  <li>Rest API.</li>
 </ul>
 
 <h3 align="left">Connect with me:</h3>
