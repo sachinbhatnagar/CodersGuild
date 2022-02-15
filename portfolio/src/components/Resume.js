@@ -223,9 +223,10 @@ const Resume = () => {
             align="center"
             className={classes.subtitle1}
           >
-            I am currently for Dedalus, a global health software company and one
-            of the largest in the world. The tech stack I am learning/using is
-            varied and includes: React, Redux, Express and Node.
+            I am currently working for Dedalus, a global health software company
+            and one of the largest in the world. The tech stack I am
+            learning/using is varied and includes: React, Redux, Express and
+            Node.
           </Typography>
         </Box>
       </Box>
