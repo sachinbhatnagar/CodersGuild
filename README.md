@@ -11,6 +11,7 @@
   <li>Introduction to JavaScript</li>
   <li>Interactive and Responsive Web Design</li>
   <li>The Mern Stack</i>
+  <li>Agile Development</i>
   <li>Introduction to Full-Stack Applications.</li>
   <li>Security Fundamentals.</li>
   <li>Rest API.</li>
