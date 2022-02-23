@@ -16,7 +16,10 @@ function Card({
         <h2>{title}</h2>
         <button
           className="price-buttons"
-          onClick={handlePriceIncrease.bind(this, price)}
+          onClick={(e) => {
+            console.log(e);
+            handlePriceIncrease(price);
+          }}
         >
           +
         </button>

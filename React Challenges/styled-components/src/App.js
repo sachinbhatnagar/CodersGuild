@@ -19,6 +19,14 @@ function App() {
 
     setPrice((prev) => (prev -= item));
   };
+
+  const items = [
+    {
+      image: "url",
+      price: 32,
+      name: "itemName",
+    },
+  ];
   return (
     <div className="App">
       <Container>
