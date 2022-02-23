@@ -15,7 +15,7 @@ function App() {
     setPrice((prev) => (prev += price));
   };
   const handlePriceDecrease = (item) => {
-    if (price === 0) return;
+    if (price <= 0) return;
 
     setPrice((prev) => (prev -= item));
   };
