@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, Fragment } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
+
 import "./App.css";
 
 function App() {
   const date = new Date();
-  console.log(date);
   const [events, setEvents] = useState([]);
   const [input, setInput] = useState("");
   const handleInput = (e) => {
@@ -15,8 +15,13 @@ function App() {
     const inputAndDate = {
       date: new Date(Date.now()),
       input,
+      id: Math.floor(Math.random() * 100) + 1,
     };
     setEvents([...events, inputAndDate]);
+  };
+  const handleDelete = (id) => {
+    const newList = events.filter((event) => event.id !== id);
+    setEvents(newList);
   };
   return (
     <div className="App">
@@ -28,9 +33,14 @@ function App() {
         <ul>
           {events.map((event, index) => {
             return (
-              <li key={index}>
-                {event.input} {event.date.toDateString()}
-              </li>
+              <Fragment key={index}>
+                <li className="li">
+                  {event.input} {event.date.toDateString()}
+                  <Button onClick={(e) => handleDelete(event.id)}>
+                    Delete
+                  </Button>
+                </li>
+              </Fragment>
             );
           })}
         </ul>
