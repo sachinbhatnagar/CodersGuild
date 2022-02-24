@@ -5,10 +5,16 @@ import ToDoList from "./components/ToDoList";
 
 function App() {
   const [inputText, setInputText] = useState("");
+  const [todos, setTodos] = useState([]);
   return (
     <div className="App">
       <header>Task Tracker</header>
-      <Form setInputText={setInputText} />
+      <Form
+        inputText={inputText}
+        todos={todos}
+        setTodos={setTodos}
+        setInputText={setInputText}
+      />
       <ToDoList />
     </div>
   );
