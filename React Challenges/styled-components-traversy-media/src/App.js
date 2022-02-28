@@ -2,13 +2,14 @@ import { Container } from "./components/styles/Container.styled";
 import { ThemeProvider } from "styled-components";
 import Header from "./components/Header";
 import GlobalStyles from "./components/styles/Global";
+import content from "./content";
 const theme = {
   colors: {
     header: "#ebfbff",
     body: " #fff",
     footer: "#003333",
   },
-  mobile: '768px'
+  mobile: "768px",
 };
 function App() {
   return (
@@ -16,9 +17,7 @@ function App() {
       <>
         <GlobalStyles />
         <Header />
-        <Container>
-          <h1>Hello World</h1>
-        </Container>
+        <Container>{content.map((item, index) => {})}</Container>
       </>
     </ThemeProvider>
   );
