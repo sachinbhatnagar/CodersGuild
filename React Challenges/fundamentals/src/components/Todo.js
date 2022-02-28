@@ -8,10 +8,12 @@ import ListGroup from "react-bootstrap/ListGroup";
 // tasks = [{id: 1, inputValue: "Eat"}]
 
 function Todo() {
+  let sendToStorage;
   const [tasks, setTasks] = useState([]);
   const [inputValue, setinputValue] = useState("");
   const handleAddTask = () => {
     setTasks([...tasks, { inputValue, id: tasks.length }]);
+    setinputValue("");
   };
   const handleChange = (e) => {
     setinputValue(e.target.value);

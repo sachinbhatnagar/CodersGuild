@@ -6,6 +6,7 @@ function Form({ setInputText, setTodos, todos, inputText }) {
   };
 
   const submitTodoHandler = (e) => {
+    localStorage.setItem("firstItem", "run away");
     e.preventDefault();
     setTodos([
       ...todos,

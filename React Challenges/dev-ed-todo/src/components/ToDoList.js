@@ -2,8 +2,6 @@ import React from "react";
 import Todo from "./Todo";
 
 function ToDoList({ todos, setTodos }) {
-  console.log(todos, "todos");
-  console.log(setTodos, "setTodos");
   return (
     <div className="todo-container">
       <ul className="todo-list">
