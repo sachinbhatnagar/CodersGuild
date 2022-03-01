@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components";
 import Header from "./components/Header";
 import Card from "./components/Card";
 import GlobalStyles from "./components/styles/Global";
+import Footer from "./components/Footer";
 import content from "./content";
 const theme = {
   colors: {
@@ -23,6 +24,7 @@ function App() {
             return <Card key={index} item={item} />;
           })}
         </Container>
+        <Footer />
       </>
     </ThemeProvider>
   );
