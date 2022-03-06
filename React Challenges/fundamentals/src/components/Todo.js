@@ -7,7 +7,7 @@ import Button from "react-bootstrap/Button";
 import ListGroup from "react-bootstrap/ListGroup";
 // tasks = [{id: 1, inputValue: "Eat"}]
 
-function Todo() {
+function Todo(props) {
   let sendToStorage;
   const [tasks, setTasks] = useState([]);
   const [inputValue, setinputValue] = useState("");

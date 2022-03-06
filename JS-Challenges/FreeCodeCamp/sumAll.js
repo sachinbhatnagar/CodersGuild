@@ -9,6 +9,7 @@ function sumAll(arr) {
   let total = 0;
   let high = Math.max(...arr);
   let low = Math.min(...arr);
+  console.log(low);
 
   for (let i = low; i <= high; i++) {
     total += i;
