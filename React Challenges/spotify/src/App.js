@@ -1,15 +1,12 @@
 import "./App.css";
+import Home from "./components/Home";
 import Footer from "./components/Footer";
-import SideNav from "./components/SideNav";
-import MainHeader from "./components/MainHeader";
-import Section from "./components/Section";
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Flex, MainWrapper } from "./components/Main.styled";
+import Search from "./components/Search";
 
 function App() {
-  const [discography, setDiscography] = useState([]);
-  const [selectedSong, setSelectedSong] = useState({});
+  const [selectedSong, setSelectedSong] = useState(null);
 
   //App is your Big parent (gran gran gran gran gran gran old father)
   //create a common state that will update when the user clicks and pass the information between siblings components
@@ -20,7 +17,30 @@ function App() {
   return (
     <>
       <Router>
-        <Flex>
+        <Routes>
+          <Route
+            path="/"
+            exact
+            element={
+              <Home
+                selectedSong={selectedSong}
+                setSelectedSong={setSelectedSong}
+              />
+            }
+          />
+          <Route path="/search" exact element={<Search />} />
+        </Routes>
+        <Footer selectedSong={selectedSong} />
+      </Router>
+    </>
+  );
+}
+
+export default App;
+
+{
+  /* <Flex>
+          
           <SideNav />
           <MainWrapper>
             <MainHeader />
@@ -31,12 +51,5 @@ function App() {
               discography={discography}
             />
           </MainWrapper>
-        </Flex>
-        <Routes>{/* <Route path="/" exact element={Home} /> */}</Routes>
-        <Footer selectedSong={selectedSong} />
-      </Router>
-    </>
-  );
+        </Flex> */
 }
-
-export default App;

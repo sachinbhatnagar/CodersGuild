@@ -7,10 +7,10 @@ import {
   Image,
 } from "./Card.styled";
 // index is the selected song ID
-function Card({ src, title, artist, index, settingItem }) {
+function Card({ src, title, artist, index, setSelectedSong }) {
   const [flag, setFlag] = useState(false);
-  const handleClick = (index) => {
-    settingItem(index);
+  const handleClick = () => {
+    setSelectedSong({ src: src, title: title, artist: artist });
 
     if (flag) {
       setFlag(false);
@@ -20,7 +20,7 @@ function Card({ src, title, artist, index, settingItem }) {
   };
 
   return (
-    <CardContainer onClick={() => handleClick(index)} flag={flag}>
+    <CardContainer onClick={() => handleClick()} flag={flag}>
       <Image src={src} />
       <CardTextContainer>
         {/* <h3>{title}</h3> */}

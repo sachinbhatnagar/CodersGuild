@@ -1,10 +1,10 @@
 import React from "react";
-import SideNav from "./components/SideNav";
-import MainHeader from "./components/MainHeader";
-import Section from "./components/Section";
-import { Flex, MainWrapper } from "./components/Main.styled";
+import SideNav from "./SideNav";
+import MainHeader from "./MainHeader";
+import Section from "./Section";
+import { Flex, MainWrapper } from "./Main.styled";
 
-function Home() {
+function Home({ selectedSong, setSelectedSong, setDiscography, discography }) {
   return (
     <Flex>
       <SideNav />

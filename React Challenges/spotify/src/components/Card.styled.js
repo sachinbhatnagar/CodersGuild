@@ -4,6 +4,7 @@ export const CardContainer = styled.div`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 200px;
+
   margin: 0 auto;
   border: ${({ flag }) => {
     return flag ? "border: none" : "2px solid rgb(128,128,128, 0.7)";
