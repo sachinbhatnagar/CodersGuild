@@ -11,4 +11,5 @@ const squareList = (arr) => {
   });
   return squared;
 };
+
 const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
