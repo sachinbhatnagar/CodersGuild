@@ -29,3 +29,4 @@
 | --- | :-----------: | ---------------------------------------------------------------------------------------: |
 | 1   | Semantic HTML | [Web Live](https://lloydrivers.github.io/CodersGuild/Semantic-HTML-Challenge/index.html) |
 | 2   |   Portfolio   |                                        [Web Live](https://portfolio-rho-blue.vercel.app) |
+| 3   | Semantic HTML |           [Web Live](https://lloydrivers.github.io/CodersGuild/tipCalculator/index.html) |
