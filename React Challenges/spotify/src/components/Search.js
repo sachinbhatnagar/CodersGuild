@@ -36,8 +36,6 @@ function Search() {
         },
       })
       .then((response) => {
-        console.log("From Key Press");
-        console.log(response.data.data);
         setSearchPerson([...response.data.data]);
       });
   };
