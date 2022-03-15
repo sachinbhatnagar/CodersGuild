@@ -1,7 +1,7 @@
 const menuItems = document.querySelectorAll(".menu");
 const total = document.getElementById("total");
 const tip = document.getElementById("tip");
-const flag = true;
+
 let accumaltor = 0;
 menuItems.forEach((element) => {
   element.addEventListener("click", function () {
@@ -16,10 +16,11 @@ menuItems.forEach((element) => {
 
 // const itemAdded = element.getAttribute("data-added");
 
-// if (itemAdded === "false") {
+// if (!itemAdded) {
 //   accumaltor += Number(element.getAttribute("data-price"));
 //   element.setAttribute("data-added", "true");
 // } else {
 //   element.setAttribute("data-added", "false");
 //   accumaltor -= Number(element.getAttribute("data-price"));
+// const flag = true;
 // }
