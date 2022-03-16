@@ -1,5 +1,4 @@
 // Foursquare API Info
-
 const foursquareKey = "fsq346bkrI2d6o2lsZ0TPlKwwoWr3nUU1WZ6QT3szUH9MB8=";
 const url = "https://api.foursquare.com/v3/places/search?near=";
 
@@ -40,28 +39,48 @@ const getPlaces = async () => {
   try {
     const response = await fetch(urlToFetch, options);
     if (response.ok) {
-      console.log(response);
+      const jsonResponse = await response.json();
+      const places = jsonResponse.results;
+      return places;
     }
   } catch (error) {
-    console.log("error getting data");
+    console.log(error);
   }
 };
 
-const getForecast = () => {};
+const getForecast = async () => {
+  const urlToFetch = `${weatherUrl}?q=${$input.val()}&APPID=${openWeatherKey}`;
+  try {
+    const response = await fetch(urlToFetch);
+    if (response.ok) {
+      const jsonResponse = await response.json();
+      return jsonResponse;
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 // Render functions
 const renderPlaces = (places) => {
   $placeDivs.forEach(($place, index) => {
     // Add your code here:
-
-    const placeContent = "";
+    const place = places[index];
+    const placeIcon = place.categories[0].icon;
+    console.log(placeIcon);
+    const placeImgSrc = `${placeIcon.prefix}bg_64${placeIcon.suffix}`;
+    const placeContent = createPlaceHTML(
+      place.name,
+      place.location,
+      placeImgSrc
+    );
     $place.append(placeContent);
   });
   $destination.append(`<h2>${places[0].location.locality}</h2>`);
 };
 
 const renderForecast = (forecast) => {
-  const weatherContent = "";
+  const weatherContent = createWeatherHTML(forecast);
   $weatherDiv.append(weatherContent);
 };
 
@@ -70,8 +89,12 @@ const executeSearch = () => {
   $weatherDiv.empty();
   $destination.empty();
   $container.css("visibility", "visible");
-  getPlaces();
-  getForecast();
+  getPlaces().then((places) => {
+    renderPlaces(places);
+  });
+  getForecast().then((forecast) => {
+    renderForecast(forecast);
+  });
   return false;
 };
 
