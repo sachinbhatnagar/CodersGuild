@@ -1,9 +1,10 @@
-// Foursquare API Info
-const foursquareKey = "fsq346bkrI2d6o2lsZ0TPlKwwoWr3nUU1WZ6QT3szUH9MB8=";
+require("dotenv").config();
+
+const foursquareKey = process.env.foursquareKey;
 const url = "https://api.foursquare.com/v3/places/search?near=";
 
 // OpenWeather Info
-const openWeatherKey = "ebd3190a94f5614c434d26345192d372";
+const openWeatherKey = process.env.openWeatherKey;
 const weatherUrl = "https://api.openweathermap.org/data/2.5/weather";
 
 // Page Elements
@@ -31,7 +32,6 @@ const options = {
   },
 };
 
-// Add AJAX functions here:
 const getPlaces = async () => {
   const city = $input.val();
   const urlToFetch = `${url}${city}&limit=10`;
