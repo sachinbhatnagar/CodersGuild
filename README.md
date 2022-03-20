@@ -1,4 +1,4 @@
-<h2>I am currently enrolled on a Level 4 - Software Developer Apprenticeship with The Coders Guild.</h2>
+<h2>I am currently enrolled on a Level 4 - software developer Apprenticeship with The Coders Guild.</h2>
 <p>This repository is dedicated to my apprenticeship homework/assignments. </p>
 
 <br/>
