@@ -27,7 +27,6 @@ function Gallery() {
       <div className="container">
         <div className="row">
           {images.map((image, index) => {
-            console.log(image);
             return (
               <div className="col-6 col-md-4">
                 <GalleryCard

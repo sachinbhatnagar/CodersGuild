@@ -20,8 +20,6 @@ function Home() {
       <div className="container">
         <div className="row">
           {recipes.map((recipe, index) => {
-            console.log(recipe);
-
             return (
               <div className="col-6 col-md-4">
                 <Card

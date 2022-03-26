@@ -3,6 +3,7 @@ const total = document.getElementById("total");
 const tip = document.getElementById("tip");
 
 let accumaltor = 0;
+
 menuItems.forEach((element) => {
   element.addEventListener("click", function () {
     accumaltor += Number(element.getAttribute("data-price"));
@@ -13,14 +14,3 @@ menuItems.forEach((element) => {
     tip.innerText = Math.floor(totalTip * 10) / 10;
   });
 });
-
-// const itemAdded = element.getAttribute("data-added");
-
-// if (!itemAdded) {
-//   accumaltor += Number(element.getAttribute("data-price"));
-//   element.setAttribute("data-added", "true");
-// } else {
-//   element.setAttribute("data-added", "false");
-//   accumaltor -= Number(element.getAttribute("data-price"));
-// const flag = true;
-// }
