@@ -43,26 +43,28 @@ function Pexels() {
       .catch((error) => console.log("Images error " + error));
   };
   useEffect(() => {
-    axios
-      .get(imageUrl, {
-        headers: {
-          Authorization: `${AppKey}`,
-        },
-      })
-      .then((response) => {
-        setPhotos(response.data.photos);
-      })
-      .catch((error) => console.log("Images error " + error));
-    axios
-      .get(videoUrl, {
-        headers: {
-          Authorization: `${AppKey}`,
-        },
-      })
-      .then((response) => {
-        setVideos(response.data.videos);
-      })
-      .catch((error) => console.log("Images error " + error));
+    console.log("Am I rendering?");
+    getData();
+    // axios
+    //   .get(imageUrl, {
+    //     headers: {
+    //       Authorization: `${AppKey}`,
+    //     },
+    //   })
+    //   .then((response) => {
+    //     setPhotos(response.data.photos);
+    //   })
+    //   .catch((error) => console.log("Images error " + error));
+    // axios
+    //   .get(videoUrl, {
+    //     headers: {
+    //       Authorization: `${AppKey}`,
+    //     },
+    //   })
+    //   .then((response) => {
+    //     setVideos(response.data.videos);
+    //   })
+    //   .catch((error) => console.log("Images error " + error));
   }, []);
   return (
     <>
@@ -97,8 +99,8 @@ function Pexels() {
         <div className="row">
           {videos.map((video) => {
             return (
-              <div className="col-6 col-md-4">
-                <PexelVideoCard link={video.video_files[0]} />
+              <div key={video.id} className="col-6 col-md-4">
+                <PexelVideoCard link={video.video_files[0].link} />
               </div>
             );
           })}

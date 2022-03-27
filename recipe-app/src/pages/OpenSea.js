@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import DrinksCard from "./DrinksCard";
-function OpenSea({ cocktail }) {
+function OpenSea() {
   const [drinks, setDrinks] = useState([]);
-  // const [cocktail, setCocktail] = useState("");
+  const [cocktail, setCocktail] = useState("vodka");
   const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktail}`;
 
   useEffect(() => {

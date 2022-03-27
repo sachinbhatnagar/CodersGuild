@@ -1,10 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Card from "./../Card";
+import Card from "../Card";
 const AppID = process.env.REACT_APP_APPID;
 const AppKey = process.env.REACT_APP_APPKEY;
 
-function Home() {
+function Recipes() {
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("chicken");
 
@@ -39,4 +39,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Recipes;

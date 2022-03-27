@@ -6,7 +6,7 @@ function PexelVideoCard({ link }) {
       <iframe
         className="embed-responsive-item"
         src={link}
-        allowfullscreen
+        allowFullScreen
       ></iframe>
     </div>
   );

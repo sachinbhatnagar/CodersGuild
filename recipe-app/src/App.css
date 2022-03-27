@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.liked {
+  border: 3px solid purple;
+}
+
+.fa,
+.fa-heart {
+  color: red;
+}
