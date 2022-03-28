@@ -3,9 +3,10 @@ import Pexels from "./pages/Pexels";
 import Gallery from "./pages/Gallery";
 import Recipes from "./pages/Recipes";
 import MyNav from "./pages/MyNav";
+import UserForm from "./pages/UserForm";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -20,19 +21,24 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //Remember to research!!!!!!
 
 function App() {
+  const [saved, setSaved] = useState([]);
   return (
     <>
       <Router>
         <MyNav />
         <Routes>
           <Route path="/" element={<Pexels />} />
-          <Route path="/unsplash" element={<Gallery />} />
+          <Route
+            path="/unsplash"
+            element={<Gallery saved={saved} setSaved={setSaved} />}
+          />
           <Route path="/opensea" element={<OpenSea />} />
           <Route path="/recipes" element={<Recipes />} />
+          <Route path="/form" element={<UserForm />} />
         </Routes>
       </Router>
     </>
   );
 }
-
+// save > postman > hooks... > projects
 export default App;

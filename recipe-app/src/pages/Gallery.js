@@ -6,7 +6,7 @@ const REACT_APP_ACCESS_KEY = process.env.REACT_APP_ACCESS_KEY;
 
 //we already got the css!
 
-function Gallery() {
+function Gallery({ setSaved }) {
   const [search, setSearch] = useState("a");
   const [images, setImages] = useState([]);
   const [globalCount, setGlobalCount] = useState(0);
@@ -37,6 +37,7 @@ function Gallery() {
             return (
               <div key={index} className="col-6 col-md-4">
                 <GalleryCard
+                  setSaved={setSaved}
                   image={image.urls.regular}
                   alt_description={image.alt_description}
                   title={image.alt_description}

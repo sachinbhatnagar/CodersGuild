@@ -25,8 +25,6 @@ function Pexels() {
         },
       })
       .then((response) => {
-        console.log("Image url ");
-        console.log(response.data.photos);
         setPhotos(response.data.photos);
       })
       .catch((error) => console.log("Images error " + error));
@@ -43,7 +41,6 @@ function Pexels() {
       .catch((error) => console.log("Images error " + error));
   };
   useEffect(() => {
-    console.log("Am I rendering?");
     getData();
   }, []);
   return (

@@ -20,9 +20,7 @@ function GalleryCard({
   const handleLike = () => {
     if (likesList.includes(title)) {
       setLikesList((previousValue) => {
-        console.log(previousValue, "previous value inside remove condition");
         return likesList.filter((likedCard) => {
-          console.log("The app has crrashed");
           return likedCard !== title;
         });
       });

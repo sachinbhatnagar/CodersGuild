@@ -7,6 +7,15 @@ function OpenSea() {
   const [cocktail, setCocktail] = useState("vodka");
   const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktail}`;
 
+  const getData = async () => {
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
     axios.get(url).then((response) => {
       //can write whatever logic you want
