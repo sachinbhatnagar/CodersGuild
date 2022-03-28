@@ -47,6 +47,11 @@ function MyNav() {
               Form
             </Link>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link " to="/makeup">
+              Makeup
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

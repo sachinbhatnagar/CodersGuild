@@ -61,9 +61,8 @@ function Pexels() {
         <div className="row">
           {photos.map((photo, id) => {
             return (
-              <div className="col-6 col-md-4">
+              <div key={id} className="col-6 col-md-4">
                 <PexelImageCard
-                  key={id}
                   photographer={photo.photographer}
                   medium={photo.src.medium}
                   alt={photo.alt}
