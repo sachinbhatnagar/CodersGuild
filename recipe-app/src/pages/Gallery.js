@@ -10,6 +10,7 @@ function Gallery() {
   const [search, setSearch] = useState("a");
   const [images, setImages] = useState([]);
   const [globalCount, setGlobalCount] = useState(0);
+  const [likesList, setLikesList] = useState([]);
 
   const url = `https://api.unsplash.com/search/photos?query=${search}&client_id=${REACT_APP_ACCESS_KEY}`;
 
@@ -28,7 +29,7 @@ function Gallery() {
     <>
       <input onChange={(e) => setSearch(e.target.value)} type="search" />
       <button onClick={(e) => handleClick(e)}>search</button>
-      <h1>Total likes: {globalCount}</h1>
+      <h1>Total likes: {likesList.length}</h1>
       <hr />
       <div className="container">
         <div className="row">
@@ -43,6 +44,8 @@ function Gallery() {
                   bio={image.user.bio}
                   setGlobalCount={setGlobalCount}
                   globalCount={globalCount}
+                  setLikesList={setLikesList}
+                  likesList={likesList}
                 />
               </div>
             );

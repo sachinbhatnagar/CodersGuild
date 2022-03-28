@@ -45,26 +45,6 @@ function Pexels() {
   useEffect(() => {
     console.log("Am I rendering?");
     getData();
-    // axios
-    //   .get(imageUrl, {
-    //     headers: {
-    //       Authorization: `${AppKey}`,
-    //     },
-    //   })
-    //   .then((response) => {
-    //     setPhotos(response.data.photos);
-    //   })
-    //   .catch((error) => console.log("Images error " + error));
-    // axios
-    //   .get(videoUrl, {
-    //     headers: {
-    //       Authorization: `${AppKey}`,
-    //     },
-    //   })
-    //   .then((response) => {
-    //     setVideos(response.data.videos);
-    //   })
-    //   .catch((error) => console.log("Images error " + error));
   }, []);
   return (
     <>
