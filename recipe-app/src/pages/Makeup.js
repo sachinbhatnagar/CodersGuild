@@ -5,6 +5,7 @@ import MakeUpCard from "./MakeUpCard";
 
 function Makeup() {
   const [products, setProducts] = useState([]);
+
   const url =
     "https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline";
   useEffect(() => {
@@ -13,6 +14,7 @@ function Makeup() {
       setProducts(response.data);
     });
   }, []);
+
   return (
     <div className="container">
       <div className="row">
