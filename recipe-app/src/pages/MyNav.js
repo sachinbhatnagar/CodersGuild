@@ -52,6 +52,11 @@ function MyNav() {
               Makeup
             </Link>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link " to="/filtering">
+              Filtering
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

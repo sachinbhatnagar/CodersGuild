@@ -5,6 +5,7 @@ import Recipes from "./pages/Recipes";
 import MyNav from "./pages/MyNav";
 import UserForm from "./pages/UserForm";
 import Makeup from "./pages/Makeup";
+import Filtering from "./pages/Filtering";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState } from "react";
@@ -27,6 +28,7 @@ function App() {
           <Route path="/recipes" element={<Recipes />} />
           <Route path="/form" element={<UserForm />} />
           <Route path="/makeup" element={<Makeup />} />
+          <Route path="/filtering" element={<Filtering />} />
         </Routes>
       </Router>
     </>
