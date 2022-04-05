@@ -6,6 +6,9 @@ import MyNav from "./pages/MyNav";
 import UserForm from "./pages/UserForm";
 import Makeup from "./pages/Makeup";
 import Filtering from "./pages/Filtering";
+import Jason from "./pages/Jason";
+import MovieTester from "./pages/MovieTester";
+import MyForm from "./pages/MyForm";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState } from "react";
@@ -29,6 +32,9 @@ function App() {
           <Route path="/form" element={<UserForm />} />
           <Route path="/makeup" element={<Makeup />} />
           <Route path="/filtering" element={<Filtering />} />
+          <Route path="/resources" element={<Jason />} />
+          <Route path="/movies" element={<MovieTester />} />
+          <Route path="/myform" element={<MyForm />} />
         </Routes>
       </Router>
     </>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import axios from "axios";
 import GalleryCard from "../GalleryCard";
 import { useEffect, useState } from "react";
@@ -8,6 +8,7 @@ const REACT_APP_ACCESS_KEY = process.env.REACT_APP_ACCESS_KEY;
 
 function Gallery({ setSaved }) {
   const [search, setSearch] = useState("a");
+
   const [images, setImages] = useState([]);
   const [globalCount, setGlobalCount] = useState(0);
   const [likesList, setLikesList] = useState([]);

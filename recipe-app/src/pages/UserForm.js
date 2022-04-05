@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 
 function UserForm() {
-  const [x, setX] = useState("");
-  //setX() = x =
   const [formData, setFormData] = useState({
     name: "",
     surname: "",
@@ -10,7 +8,18 @@ function UserForm() {
     password: "",
     gender: "",
   });
-  const captureData = (e) => {};
+  const captureData = (e) => {
+    e.preventDefault();
+    const body = formData;
+    // const body = {
+    //   first_Name: formData.name,
+    //   second: formData.surname,
+    //   email_address: formData.email,
+    //   urser_password: formData.password,
+    //   user_gender: formData.gender,
+    // };
+    console.log(body);
+  };
   return (
     <section className="container">
       <form onSubmit={captureData}>

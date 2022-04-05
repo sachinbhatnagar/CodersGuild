@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 function MyNav() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light px-4">
-      <h3 className="navbar-brand">MyApp</h3>
       <button
         className="navbar-toggler"
         type="button"
@@ -55,6 +54,31 @@ function MyNav() {
           <li className="nav-item">
             <Link className="nav-link " to="/filtering">
               Filtering
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link " to="/resources">
+              Resources
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link " to="/movies">
+              Movies
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link " to="/myform">
+              My Form
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link " to="/context">
+              Context
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link " to="/nested">
+              Nested
             </Link>
           </li>
         </ul>
