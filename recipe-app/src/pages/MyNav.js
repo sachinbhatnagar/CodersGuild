@@ -81,6 +81,11 @@ function MyNav() {
               Nested
             </Link>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link " to="/bookstore">
+              Bookstore
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

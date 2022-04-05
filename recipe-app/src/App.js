@@ -9,11 +9,12 @@ import Filtering from "./pages/Filtering";
 import Jason from "./pages/Jason";
 import MovieTester from "./pages/MovieTester";
 import MyForm from "./pages/MyForm";
-
+import Bookstore from "./nested/Bookstore";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import myBeautifulBooks from "./books.json";
 
 function App() {
   const [saved, setSaved] = useState([]);
@@ -35,6 +36,10 @@ function App() {
           <Route path="/resources" element={<Jason />} />
           <Route path="/movies" element={<MovieTester />} />
           <Route path="/myform" element={<MyForm />} />
+          <Route
+            path="/bookstore"
+            element={<Bookstore myBeautifulBooks={myBeautifulBooks} />}
+          />
         </Routes>
       </Router>
     </>
