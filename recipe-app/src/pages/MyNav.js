@@ -25,6 +25,12 @@ function MyNav() {
               Pexels
             </Link>
           </li>
+          <li className="nav-item active">
+            <Link className="nav-link" to="/counter">
+              Counter
+            </Link>
+          </li>
+
           <li className="nav-item">
             <Link className="nav-link" to="/unsplash">
               Unsplash
@@ -84,6 +90,11 @@ function MyNav() {
           <li className="nav-item">
             <Link className="nav-link " to="/bookstore">
               Bookstore
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link " to="/work">
+              Work
             </Link>
           </li>
         </ul>

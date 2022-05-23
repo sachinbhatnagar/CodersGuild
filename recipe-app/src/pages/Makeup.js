@@ -5,6 +5,7 @@ import MakeUpCard from "./MakeUpCard";
 
 function Makeup() {
   const [products, setProducts] = useState([]);
+  const [count, setCount] = useState(0);
 
   const url =
     "https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline";

@@ -11,13 +11,18 @@ import MovieTester from "./pages/MovieTester";
 import MyForm from "./pages/MyForm";
 import Bookstore from "./nested/Bookstore";
 import "bootstrap/dist/css/bootstrap.min.css";
+import BootsrapSlider from "./pages/BootsrapSlider";
 import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import myBeautifulBooks from "./books.json";
+import Work from "./pages/Work";
+import SimpleCounter from "./pages/SimpleCounter";
+import LoadingPractice from "./LoadingPractice";
 
 function App() {
   const [saved, setSaved] = useState([]);
+  const [login, setLogin] = useState(true);
   return (
     <>
       <Router>
@@ -29,17 +34,23 @@ function App() {
             element={<Gallery saved={saved} setSaved={setSaved} />}
           />
           <Route path="/opensea" element={<OpenSea />} />
-          <Route path="/recipes" element={<Recipes />} />
+          <Route path="/loading" element={<LoadingPractice />} />
+          {login && <Route path="/recipes" element={<Recipes />} />}
+
           <Route path="/form" element={<UserForm />} />
+          <Route path="/counter" element={<SimpleCounter />} />
+
           <Route path="/makeup" element={<Makeup />} />
           <Route path="/filtering" element={<Filtering />} />
           <Route path="/resources" element={<Jason />} />
           <Route path="/movies" element={<MovieTester />} />
           <Route path="/myform" element={<MyForm />} />
+          <Route path="/work" element={<Work />} />
           <Route
             path="/bookstore"
             element={<Bookstore myBeautifulBooks={myBeautifulBooks} />}
           />
+          <Route path="/slider" element={<BootsrapSlider />} />
         </Routes>
       </Router>
     </>

@@ -23,11 +23,13 @@ export const UserContext = createContext();
 
 // Third Step:
 function App_backup2() {
-  const [user, setUser] = useState({ name: "John Doe", age: 15 });
+  const [users, setUser] = useState({ name: "John Doe", age: 15 });
+
+
   return (
     <>
       <UserContext.Provider value={user}>
-        <First />
+        <First user={user} />
       </UserContext.Provider>
     </>
   );
