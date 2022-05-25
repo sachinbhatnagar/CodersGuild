@@ -19,6 +19,7 @@ import myBeautifulBooks from "./books.json";
 import Work from "./pages/Work";
 import SimpleCounter from "./pages/SimpleCounter";
 import LoadingPractice from "./LoadingPractice";
+import NewForm from "./pages/newForm/components/NewForm";
 
 function App() {
   const [saved, setSaved] = useState([]);
@@ -33,6 +34,7 @@ function App() {
             path="/unsplash"
             element={<Gallery saved={saved} setSaved={setSaved} />}
           />
+          <Route path="/newform" element={<NewForm />} />
           <Route path="/opensea" element={<OpenSea />} />
           <Route path="/loading" element={<LoadingPractice />} />
           {login && <Route path="/recipes" element={<Recipes />} />}
