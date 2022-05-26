@@ -27,7 +27,7 @@ function NewForm() {
               <span className="number">1</span> Your Basic Info:
             </legend>
             <TextInput
-              onChange={onChangeHandler}
+              onChangeHandler={onChangeHandler}
               formData={formData}
               value={formData.name}
               labelValue="Name"
@@ -36,7 +36,7 @@ function NewForm() {
               id="name"
             />
             <TextInput
-              onChange={onChangeHandler}
+              onChangeHandler={onChangeHandler}
               value={formData.email}
               labelValue="Email"
               type="email"
@@ -44,7 +44,7 @@ function NewForm() {
               id="mail"
             />
             <TextInput
-              onChange={onChangeHandler}
+              onChangeHandler={onChangeHandler}
               value={formData.password}
               labelValue="Password"
               type="password"
